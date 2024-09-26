@@ -14,6 +14,7 @@ import RtcEngine, {
 
 import requestCameraAndAudioPermission from './components/Permission';
 import styles from './components/Style';
+import WebView from 'react-native-webview';
 
 const config = {
   appId: "4ee59c021cbb4bb99df914b180682724",
@@ -144,7 +145,8 @@ const App = () => {
 
   return (
     <View style={styles.max}>
-      <View style={styles.max}>
+        <WebView source={{ uri: 'https://reactnative.dev/' }} style={{ flex: 1 }} />
+      {/* <View style={styles.max}>
         <View style={styles.buttonHolder}>
           <TouchableOpacity onPress={startCall} style={styles.button}>
             <Text style={styles.buttonText}> Start Call </Text>
@@ -154,7 +156,7 @@ const App = () => {
           </TouchableOpacity>
         </View>
         {_renderVideos()}
-      </View>
+      </View> */}
     </View>
   );
 };
